@@ -44,6 +44,7 @@ public class PersonService {
 
     }
 
+
     public PersonDTO findById(@PathVariable long id) throws PersonNotFoundException {
         Person person = personRepository.findById(id)
                 .orElseThrow(() -> new PersonNotFoundException(id));
